@@ -1,0 +1,139 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<h1 class="hidden">Conact</h1>
+
+<section class="inViewAnimate contactHeader">
+    <h1 class="hidden"></h1>
+    <div class="content">
+        <f:if condition="{v:page.language()} == 0">
+            <f:then>
+                <h1 class="inViewAnimate">Say hello.</h1>
+                <p>Is there a project or challenge you’d like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:then>
+            <f:else>
+                <h1 class="inViewAnimate">Say hello.[DE]</h1>
+                <p>Is there a project or challenge you’d like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:else>
+        </f:if>
+
+
+        <div class="flexTable contactPersons">
+
+            <f:for each="{persons}" as="person" key="personKey" iteration="itemIteration">
+                <article>
+                    <header class="imageWrap inViewAnimate">
+                        <img class="lazy" data-src="{person.sayHelloPotrait.originalResource.publicUrl}" width="320" height="380" alt="" />
+                    </header>
+                    <footer>
+                        {person.firstName} {person.lastName}<br >
+                        <span class="tel">Phone: {person.phone}</span><br>
+                        <a class="email" href="mailto:{person.email}">{person.email}</a>
+                    </footer>
+                </article>
+            </f:for>
+
+        </div>
+
+        <div class="flexTable contactForm">
+            <f:if condition="{v:page.language()} == 0">
+                <f:then>
+                    <article>
+                        <form action="#" class="cssForm inViewAnimate" id="contact-form" XXdata-init="custom" method="post">
+
+                            <fieldset>
+
+                                <label>
+                                    <input name="name" type="text" placeholder="Your name*" required="required" autocomplete="name">
+                                </label>
+
+                                <label>
+                                    <input name="email" placeholder="Your email address*" type="email"  required="required" />
+                                </label>
+
+                                <label>
+                                    <textarea class="noEnlarging" name="message" data-autogrow="true" cols="50" rows="5" required="required" placeholder="Your message*"></textarea>
+                                </label>
+
+                            </fieldset>
+
+                            <div class="buttonGroup">
+                                <span>*Required field</span>
+
+                                <button type="submit">Send</button>
+
+                            </div>
+
+                        </form>
+                        <div id="contact-success">
+                            <h1>Thank you.</h1>
+                            <p>We received your message and will get back to you soon.</p>
+                            <p>Keep smiling.</p>
+                        </div>
+                    </article>
+                </f:then>
+                <f:else>
+                    <article>
+                        <form action="#" class="cssForm inViewAnimate" id="contact-form" XXdata-init="custom" method="post">
+
+                            <fieldset>
+
+                                <label>
+                                    <input name="name" type="text" placeholder="Ihre name*" required="required" autocomplete="name">
+                                </label>
+
+                                <label>
+                                    <input name="email" placeholder="Ihre email address*" type="email"  required="required" />
+                                </label>
+
+                                <label>
+                                    <textarea class="noEnlarging" name="message" data-autogrow="true" cols="50" rows="5" required="required" placeholder="Your message*"></textarea>
+                                </label>
+
+                            </fieldset>
+
+                            <div class="buttonGroup">
+                                <span>*Required field</span>
+
+                                <button type="submit">Send</button>
+
+                            </div>
+
+                        </form>
+                        <div id="contact-success">
+                            <h1>Thank you.</h1>
+                            <p>We received your message and will get back to you soon.</p>
+                            <p>Keep smiling.</p>
+                        </div>
+                    </article>
+                </f:else>
+            </f:if>
+
+            <article>
+                <p class="inViewAnimate">
+                    <span class="org">Orange Hive GmbH</span><br>
+                    <a class="mobileOnly" href="geo:50.1124030,8.7192310" class="adr" target="_blank" title="open location">
+                        <span class="street-address">Lindleystraße 12</span><br>
+                        <span class="postal-code">60314</span> <span class="locality">Frankfurt am Main <br />Germany</span>
+                    </a>
+                    <a class="desktopOnly" href="https://www.google.de/maps/dir/''/Lindleystra%C3%9Fe+12,+60314+Frankfurt+am+Main/" class="adr" target="_blank" title="open location">
+                        <span class="street-address">Lindleystraße 12</span><br>
+                        <span class="postal-code">60314</span> <span class="locality">Frankfurt am Main <br />Germany</span>
+                    </a>
+                </p>
+                <p class="inViewAnimate">
+                    <span class="tel">Phone: +49 69 15 04 66 00</span><br>
+                    <span class="tel">Fax: +49 69 15 04 66 063</span>
+                </p>
+                <p class="inViewAnimate"><a class="email" href="mailto:hello@orangehive.de">hello@orangehive.de</a></p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<section id="googleMap" class="inViewAnimate" >
+
+</section>
+
+</html>

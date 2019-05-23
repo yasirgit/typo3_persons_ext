@@ -1,0 +1,19 @@
+<f:if condition="{flexSettings.article_class} == 1">
+    <f:then>
+        <article class="rightColumn {flexSettings.type} inViewAnimate">
+    </f:then>
+    <f:else>
+        <article class="{flexSettings.type} inViewAnimate">
+    </f:else>
+</f:if>
+
+<div class="imageWrap">
+    <img class="lazy" data-src="{person.0.profilePic.originalResource.publicUrl}" width="{person.0.imageWidth}" height="{person.0.imageHeight}" alt="" />
+</div>
+<div class="content">
+    <h2>{person.0.firstName}</h2>
+    <p>{person.0.role.title} </p>
+</div>
+<span class="hover"></span>
+
+</article>

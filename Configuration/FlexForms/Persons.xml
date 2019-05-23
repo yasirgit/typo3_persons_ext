@@ -1,0 +1,215 @@
+<T3DataStructure>
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Mode</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Overview</numIndex>
+                                        <numIndex index="1">Person->overview;Person->detail</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">Founder</numIndex>
+                                        <numIndex index="1">Person->founder</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">FindOutMore</numIndex>
+                                        <numIndex index="1">Person->findOutMore</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">Contact</numIndex>
+                                        <numIndex index="1">Person->contact</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">FounderDetail</numIndex>
+                                        <numIndex index="1">Person->founderDetail</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">FounderDe</numIndex>
+                                        <numIndex index="1">Person->founderDe</numIndex>
+                                    </numIndex>
+                                </items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+                    <settings.person>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>Select-Person</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tx_persons_domain_model_person</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <foreign_table>tx_persons_domain_model_person</foreign_table>
+
+                                <foreign_table_where>
+                                    AND tx_persons_domain_model_person.deleted = 0
+                                    AND tx_persons_domain_model_person.hidden = 0
+                                    AND tx_persons_domain_model_person.t3ver_oid = 0
+                                    ORDER BY tx_persons_domain_model_person.title
+                                </foreign_table_where>
+
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.person>
+
+                    <settings.type>
+                        <TCEforms>
+                            <label>Type</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0">
+                                        <numIndex index="0">Select Type</numIndex>
+                                        <numIndex index="1">Select Type</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">type1</numIndex>
+                                        <numIndex index="1">type1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">type2</numIndex>
+                                        <numIndex index="1">type2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">type3</numIndex>
+                                        <numIndex index="1">type3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">type4</numIndex>
+                                        <numIndex index="1">type4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">type5</numIndex>
+                                        <numIndex index="1">type5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">type6</numIndex>
+                                        <numIndex index="1">type6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">type7</numIndex>
+                                        <numIndex index="1">type7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">type8</numIndex>
+                                        <numIndex index="1">type8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">type9</numIndex>
+                                        <numIndex index="1">type9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10">
+                                        <numIndex index="0">type10</numIndex>
+                                        <numIndex index="1">type10</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11">
+                                        <numIndex index="0">type11</numIndex>
+                                        <numIndex index="1">type11</numIndex>
+                                    </numIndex>
+                                    <numIndex index="12">
+                                        <numIndex index="0">type12</numIndex>
+                                        <numIndex index="1">type12</numIndex>
+                                    </numIndex>
+                                    <numIndex index="13">
+                                        <numIndex index="0">type13</numIndex>
+                                        <numIndex index="1">type13</numIndex>
+                                    </numIndex>
+                                    <numIndex index="14">
+                                        <numIndex index="0">type14</numIndex>
+                                        <numIndex index="1">type14</numIndex>
+                                    </numIndex>
+                                    <numIndex index="15">
+                                        <numIndex index="0">type15</numIndex>
+                                        <numIndex index="1">type15</numIndex>
+                                    </numIndex>
+                                    <numIndex index="16">
+                                        <numIndex index="0">type16</numIndex>
+                                        <numIndex index="1">type16</numIndex>
+                                    </numIndex>
+                                    <numIndex index="17">
+                                        <numIndex index="0">type17</numIndex>
+                                        <numIndex index="1">type17</numIndex>
+                                    </numIndex>
+                                    <numIndex index="18">
+                                        <numIndex index="0">type18</numIndex>
+                                        <numIndex index="1">type18</numIndex>
+                                    </numIndex>
+                                    <numIndex index="19">
+                                        <numIndex index="0">type19</numIndex>
+                                        <numIndex index="1">type19</numIndex>
+                                    </numIndex>
+                                    <numIndex index="20">
+                                        <numIndex index="0">type20</numIndex>
+                                        <numIndex index="1">type20</numIndex>
+                                    </numIndex>
+                                    <numIndex index="21">
+                                        <numIndex index="0">type21</numIndex>
+                                        <numIndex index="1">type21</numIndex>
+                                    </numIndex>
+                                    <numIndex index="22">
+                                        <numIndex index="0">type22</numIndex>
+                                        <numIndex index="1">type22</numIndex>
+                                    </numIndex>
+                                    <numIndex index="23">
+                                        <numIndex index="0">type23</numIndex>
+                                        <numIndex index="1">type23</numIndex>
+                                    </numIndex>
+                                    <numIndex index="24">
+                                        <numIndex index="0">type24</numIndex>
+                                        <numIndex index="1">type24</numIndex>
+                                    </numIndex>
+                                    <numIndex index="25">
+                                        <numIndex index="0">type25</numIndex>
+                                        <numIndex index="1">type25</numIndex>
+                                    </numIndex>
+                                    <numIndex index="26">
+                                        <numIndex index="0">type26</numIndex>
+                                        <numIndex index="1">type26</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.type>
+
+                    <settings.article>
+                        <TCEforms>
+                            <label>Right Column</label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.article>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,57 @@
+<f:for each="{persons}" as="person" key="personKey" iteration="itemIteration">
+    <section class="{person.sectionClass} inViewAnimate">
+
+        <div class="content flexTable">
+            <f:if condition="{person.firstName} == 'Laura'">
+                <f:then>
+                    <article>
+                        <div class="inViewAnimate">
+                            <header>
+                                <h1>{person.firstName} {person.lastName}</h1>
+                                <p class="preheader">{person.role.title}</p>
+                            </header>
+
+                            {person.description -> f:format.html()}
+                            <p>&nbsp;</p>
+                            <p>Say hello to {person.firstName}: <a href="mailto:{person.email}">{person.email}</a>, <a target="_blank" href="{person.linkedinProfile}">Linkedin</a></p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <div class="inViewAnimate">
+                            <f:if condition="{person.quote}">
+                                <blockquote>
+                                    <p>{person.quote}</p>
+                                    <span>by {person.firstName}</span>
+                                </blockquote>
+                            </f:if>
+
+                            <div class="imageWrap inViewAnimate">
+                                <img class="lazy" data-src="{person.potrait.originalResource.publicUrl}" width="1000" height="1220" alt="" />
+                            </div>
+                        </div>
+                    </article>
+                </f:then>
+                <f:else>
+                    <article>
+                        <header>
+                            <h1>{person.firstName}<br />{person.lastName}</h1>
+                            <p class="preheader">{person.role.title}</p>
+                        </header>
+
+                        <div class="imageWrap inViewAnimate">
+                            <img class="lazy" data-src="{person.potrait.originalResource.publicUrl}" width="1000" height="1220" alt="" />
+                        </div>
+                    </article>
+
+                    <article class="inViewAnimate">
+                        {person.description -> f:format.html()}
+                        <p>&nbsp;</p>
+                        <p>Say hello to {person.firstName}: <a href="mailto:{person.email}">{person.email}</a>, <a target="_blank" href="{person.linkedinProfile}">Linkedin</a></p>
+                    </article>
+                </f:else>
+            </f:if>
+        </div>
+
+    </section>
+</f:for>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-20T10:59:32+02:00" product-name="persons">
+		<header/>
+		<body>
+			<trans-unit id="tx_persons_domain_model_person.say_hello_potrait"><source>Say Hello Potrait</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.image_height"><source>Image Height</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.image_width"><source>Image Width</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.quote"><source>Quote</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.linkedin_profile"><source>Linkedin Profile</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.section_class"><source>Section Class</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.description"><source>Description</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.potrait"><source>Potrait</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.is_employer"><source>Employer</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.phone"><source>Phone</source></trans-unit>
+			<trans-unit id="plugin.Persons"><source>plugin.Persons</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person"><source>Persons</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.profile_pic"><source>Profile Pic</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.role"><source>Role</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.email"><source>Email</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.last_name"><source>Last Name</source></trans-unit>
+			<trans-unit id="tx_persons_domain_model_person.first_name"><source>First Name</source></trans-unit>
+		</body>
+	</file>
+</xliff>

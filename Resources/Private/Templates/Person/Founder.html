@@ -1,0 +1,35 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<section id="contact" class="inViewAnimate colorBlock" >
+    <div class="content contact">
+        <f:if condition="{v:page.language()} == 0">
+            <f:then>
+                <h1>Say hello.</h1>
+                <p>Is there a project or challenge you’d like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:then>
+            <f:else>
+                <h1>Say hello.[DE]</h1>
+                <p>Is there a project or challenge you’d like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:else>
+        </f:if>
+
+        <div class="flexTable contactPersons">
+
+            <f:for each="{persons}" as="person" key="personKey" iteration="itemIteration">
+                <article>
+                    <header class="imageWrap inViewAnimate">
+                        <img class="lazy" data-src="{person.sayHelloPotrait.originalResource.publicUrl}" width="320" height="380" alt="" />
+                    </header>
+                    <footer>
+                        {person.firstName} {person.lastName}<br >
+                        <span class="tel">Phone: {person.phone}</span><br>
+                        <a class="email" href="mailto:{person.email}">{person.email}</a>
+                    </footer>
+                </article>
+            </f:for>
+        </div>
+    </div>
+</section>
+
+</html>

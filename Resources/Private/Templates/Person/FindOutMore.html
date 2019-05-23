@@ -1,0 +1,31 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<section class="inViewAnimate">
+
+    <article class="boxed">
+        <f:if condition="{v:page.language()} == 0">
+            <f:then>
+                <h1 class="inViewAnimate">Find out more</h1>
+                <p class="inViewAnimate">Is there a project or challenge you'd like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:then>
+            <f:else>
+                <h1 class="inViewAnimate">Find out more [DE]</h1>
+                <p class="inViewAnimate">Is there a project or challenge you'd like to talk to us about?<br /> Here are some of the Hivers you can contact:</p>
+            </f:else>
+        </f:if>
+
+        <footer class="flexTable inViewAnimate">
+            <f:for each="{persons}" as="person" key="personKey" iteration="itemIteration">
+                <div>
+                    <b>{person.firstName} {person.lastName}</b><br />
+                    <span class="tel">Phone: {person.phone}</span><br>
+                    <a class="email" href="mailto:{person.email}">{person.email}</a>
+                </div>
+            </f:for>
+        </footer>
+    </article>
+
+</section>
+
+</html>
